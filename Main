@@ -12,15 +12,38 @@ class Main {
 				+ "\n\nPlease enter the operator to use (’+’, ’-’, ’x’, ’/’) or press ’q’ to quit:");
 		Scanner input = new Scanner(System.in);
 		// The operator to be used is scanned by the user
-		String string = input.nextLine();
-		char operator = string.charAt(0);
+		String string = input.next();
+		char op = string.charAt(0);
 
 		// The two values to be used are scanned by the user
 		System.out.println("Please enter the first value:");
-		int firstvalue = input.nextInt();
+		int fv, sv;
+		fv = input.nextInt();
+		while (fv < 1 || fv > 99){
+			System.out.println("Invalid input, try again:");
+					fv = input.nextInt();
+		}
 		System.out.println("Please enter the second value:");
-		int secondvalue = input.nextInt();
+		sv = input.nextInt();
+					while (sv < 0 || sv > 99){
+						System.out.println("Invalid input, try again:");
+								sv = input.nextInt();
+					}
 		// End of implementation by Ludvig at 2016-09-05 11:05
+
+		if (op == '+') {
+
+		} else if (op == '-') {
+
+		} else if (op == 'x') {
+
+		} else if (op == '/') {
+
+		} else if (op == 'q') {
+
+		} else {
+		
+		}
 	}
 
 }
